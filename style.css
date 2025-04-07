@@ -1,0 +1,37 @@
+
+#headder {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: rgb(0, 0, 0);
+}
+
+.tipuri {
+    margin-right: 2rem;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.tipuri:hover {
+    opacity: 1;
+}
+
+#logo {
+    margin-left: 25vw;
+    font-weight: bold;
+    color: #b60101;
+    font-size: 1.2rem;
+}
+
+#login {
+    margin-left: 43vw;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+#login:hover {
+    opacity: 1;
+
+}
