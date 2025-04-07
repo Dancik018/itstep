@@ -129,8 +129,8 @@ body {
 .images-container {
     position: absolute;
     width: 600px;
-    margin-top: 27rem;
-    margin-left: 65rem;
+    margin-top: 24rem;
+    margin-left: 66rem;
     overflow: hidden;
 }
 
@@ -138,23 +138,23 @@ body {
     display: flex;
     gap: 1.5rem;
     position: relative;
-    cursor: grab;
-    overflow-x: auto;
-    overflow-y: hidden;
+    overflow-x: auto;  
+    overflow-y: hidden; 
     scroll-behavior: smooth;
+    width: 100%;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
 }
 
 .images-scroll::-webkit-scrollbar {
-    display: none;
+    display: none; 
 }
 
-.images-scroll.active {
-    cursor: grabbing;
-}
+
 
 .images {
-    width: 280px;
-    height: 160px;
+    width: 300px;
+    height: 200px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     transition: transform 0.3s;
@@ -166,9 +166,6 @@ body {
     user-select: none;
 }
 
-.images:hover {
-    transform: scale(1.05);
-}
 
 .episode-number {
     position: absolute;
