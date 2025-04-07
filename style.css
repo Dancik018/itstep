@@ -1,9 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow: hidden;
+}
 
 #headder {
+    padding: 1rem 2rem;
+    color: white;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
-    padding: 1rem 2rem;
-    color: rgb(0, 0, 0);
 }
 
 .tipuri {
@@ -25,7 +39,7 @@
 }
 
 #login {
-    margin-left: 43vw;
+    margin-left: 42vw;
     cursor: pointer;
     opacity: 0.8;
     transition: opacity 0.3s;
@@ -33,5 +47,136 @@
 
 #login:hover {
     opacity: 1;
-
 }
+
+#container {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(to right, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0.7) 100%), url('images/Working-man.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 6rem 2rem 2rem 2rem;
+}
+
+.main-content {
+    max-width: 600px;
+    margin-top: 5vh;
+}
+
+.popularity {
+    color: #b60101;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.name {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.description {
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.8;
+    margin-bottom: 2rem;
+    max-width: 550px;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.watch-now, .trailer {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.watch-now {
+    background-color: #b60101;
+    color: white;
+}
+
+.trailer {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    backdrop-filter: blur(5px);
+}
+
+.watch-now:hover, .trailer:hover {
+    transform: scale(1.05);
+}
+
+.rating {
+    margin-bottom: 2rem;
+}
+
+.stars {
+    color: #b60101;
+    font-size: 1.5rem;
+}
+
+.images-container {
+    position: absolute;
+    width: 600px;
+    margin-top: 27rem;
+    margin-left: 65rem;
+    overflow: hidden;
+}
+
+.images-scroll {
+    display: flex;
+    gap: 1.5rem;
+    position: relative;
+    cursor: grab;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+
+.images-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.images-scroll.active {
+    cursor: grabbing;
+}
+
+.images {
+    width: 280px;
+    height: 160px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    flex: 0 0 auto;
+    user-select: none;
+}
+
+.images:hover {
+    transform: scale(1.05);
+}
+
+.episode-number {
+    position: absolute;
+    right: 2rem;
+    bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #b60101;
+    z-index: 10;
+}
+
