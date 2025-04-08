@@ -4,7 +4,24 @@ const movies = [
         description: 'Levon Cade left his profession behind to work construction and be a good dad to his daughter. But when a local girl vanishes, he\'s asked to return to the skills that made him a mythic figure in the shadowy world of counter-terrorism.',
         image: 'images/Working-man.jpg',
         rating: '★★★★☆',
-        popularity: '#1 Most Popular'
+        popularity: '#1 Most Popular',
+        scrollImages: [
+            'images/stath-hammer.png',
+            'images/stath-girl.png',
+            'images/Working-man.jpg'
+        ]
+    },
+    {
+        title: 'Back in Action',
+        description: 'A former special forces operative must protect his city from a dangerous criminal organization.',
+        image: 'images/Back-in-action.jpg',
+        rating: '★★★☆☆',
+        popularity: '#2 Most Popular',
+        scrollImages: [
+            'images/party.jpg',
+            'images/gas-station.jpg',
+            'images/Back-in-action.jpg'
+        ]
     }
 ];
 
@@ -21,6 +38,15 @@ function updateMovie(index) {
     document.querySelector('.description').textContent = movie.description;
     document.querySelector('.popularity').textContent = movie.popularity;
     document.querySelector('.stars').textContent = movie.rating;
+    
+    const imagesScroll = document.querySelector('.images-scroll');
+    imagesScroll.innerHTML = '';
+    movie.scrollImages.forEach(imgSrc => {
+        const div = document.createElement('div');
+        div.className = 'images';
+        div.style.backgroundImage = `url('${imgSrc}')`;
+        imagesScroll.appendChild(div);
+    });
 }
 
 nextButton.addEventListener('click', () => {

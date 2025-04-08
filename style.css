@@ -60,11 +60,8 @@ body {
 }
 
 .main-content {
-    position: relative;
     max-width: 600px;
     margin-top: 5vh;
-    padding: 2rem;
-    border-radius: 10px;
 }
 
 .popularity {
@@ -130,12 +127,15 @@ body {
 .images-container {
     position: absolute;
     width: 600px;
-    margin-top: 24rem;
+    margin-top: 20rem;
     margin-left: 66rem;
     overflow: hidden;
 }
 
 .images-scroll {
+    border-radius: 10px;
+    padding: 14px;
+    backdrop-filter: blur(11px);
     display: flex;
     gap: 1.5rem;
     position: relative;
