@@ -3,7 +3,7 @@ const movies = [
         title: 'A Working Man',
         description: 'Levon Cade left his profession behind to work construction and be a good dad to his daughter. But when a local girl vanishes, he\'s asked to return to the skills that made him a mythic figure in the shadowy world of counter-terrorism.',
         image: 'images/Working-man.jpg',
-        rating: '★★★★☆',
+        rating: '★★★★★ ',
         popularity: '#1 Most Popular',
         scrollImages: [
             'images/stath-hammer.png',
@@ -15,12 +15,24 @@ const movies = [
         title: 'Back in Action',
         description: 'A former special forces operative must protect his city from a dangerous criminal organization.',
         image: 'images/Back-in-action.jpg',
-        rating: '★★★☆☆',
+        rating: '★★★★☆ ',
         popularity: '#2 Most Popular',
         scrollImages: [
             'images/party.jpg',
             'images/gas-station.jpg',
             'images/Back-in-action.jpg'
+        ]
+    },
+    {
+        title: 'Carbon',
+        description: 'In the early 1990s, when Moldova, along with other republics of the USSR, gains independence, an armed conflict with Transnistria, where the population is predominantly Russian-speaking, occurs. A young tractor driver, Dmitry, wants to go to war in order to receive an apartment from the state and start a family with his beloved girlfriend.',
+        image: 'images/carbon.jpg',
+        rating: '★★★★☆ ',
+        popularity: '#3 Most Popular',
+        scrollImages: [
+            'images/la-masa.jpg',
+            'images/car.png',
+            'images/carbon.jpg'
         ]
     }
 ];
@@ -38,7 +50,7 @@ function updateMovie(index) {
     document.querySelector('.description').textContent = movie.description;
     document.querySelector('.popularity').textContent = movie.popularity;
     document.querySelector('.stars').textContent = movie.rating;
-    
+
     const imagesScroll = document.querySelector('.images-scroll');
     imagesScroll.innerHTML = '';
     movie.scrollImages.forEach(imgSrc => {
